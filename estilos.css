@@ -1,0 +1,249 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ENCABEZADO CON FLEXBOX */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 8%;
+    background-color: #142c47;
+    color: white;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+/* MENÚ CON FLEXBOX */
+.menu {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #64b5f6;
+}
+
+/* PRESENTACIÓN CON FLEXBOX */
+.inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 70px 8%;
+    background-color: #eaf1f9;
+}
+
+.inicio-texto {
+    flex: 1;
+}
+
+.inicio-texto h1 {
+    font-size: 38px;
+    color: #142c47;
+    margin-bottom: 20px;
+}
+
+.inicio-texto p {
+    margin-bottom: 25px;
+}
+
+.inicio-imagen {
+    flex: 1;
+}
+
+.inicio-imagen img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* BOTÓN */
+.boton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2462c5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #17458d;
+}
+
+/* SECCIÓN SERVICIOS */
+.servicios {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.servicios h2,
+.galeria h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #142c47;
+}
+
+/* TARJETAS CON FLEXBOX */
+.contenedor-servicios {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    flex: 1 1 240px;
+    max-width: 360px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+}
+
+.tarjeta h3 {
+    margin-bottom: 15px;
+    color: #2462c5;
+}
+
+/* GALERÍA CON CSS GRID */
+.galeria {
+    padding: 60px 8%;
+    background-color: white;
+    text-align: center;
+}
+
+.galeria p {
+    margin-bottom: 30px;
+}
+
+/* GRID DE 3 COLUMNAS */
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contenedor-galeria img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.contenedor-galeria img:hover {
+    transform: scale(1.03);
+}
+
+/* PIE DE PÁGINA CON FLEXBOX */
+.pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 25px 8%;
+    background-color: #142c47;
+    color: white;
+}
+
+/* RESPONSIVE: TABLET */
+@media (max-width: 900px) {
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inicio-imagen {
+        width: 100%;
+    }
+
+    .contenedor-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* RESPONSIVE: CELULAR */
+@media (max-width: 600px) {
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .inicio {
+        padding: 40px 5%;
+    }
+
+    .inicio-texto h1 {
+        font-size: 28px;
+    }
+
+    .servicios,
+    .galeria {
+        padding: 40px 5%;
+    }
+
+    .contenedor-servicios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta {
+        width: 100%;
+        flex: 0 1 auto;
+    }
+
+    .contenedor-galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .pie {
+        flex-direction: column;
+        text-align: center;
+    }
+}
