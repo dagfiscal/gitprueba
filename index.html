@@ -1,18 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git vs GitHUB</title>
+    <title>Mi Portafolio Web</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
-<body bgcolor="silver">
-    <center>
-        <h1>Crear contenido Web</h1>
-        <h2>Utilizar el Git para crear un control de versiones de forma local</h2>
-        <hr>
-        <a href="https://coderfyweb.com/" target="_blank" rel="noopener noreferrer">CoderfyWeb</a>
-        <hr>
-        <h3> ::: Desarrollado por DagOnline :::</h3>
-    </center>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN: FLEXBOX -->
+    <header class="encabezado">
+        <h2 class="logo">MiPortafolio</h2>
+
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PRESENTACIÓN: FLEXBOX -->
+        <section id="inicio" class="inicio">
+            <div class="inicio-texto">
+                <h1>Bienvenido a mi sitio web</h1>
+                <p>
+                    Explora un diseño moderno desarrollado
+                    únicamente con HTML5 y CSS3.
+                    Utilizamos Flexbox y CSS Grid.
+                </p>
+                <a href="#galeria" class="boton">
+                    Explorar galería
+                </a>
+            </div>
+
+            <div class="inicio-imagen">
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=900"
+                    alt="Paisaje natural">
+            </div>
+        </section>
+
+        <!-- SERVICIOS: FLEXBOX -->
+        <section id="servicios" class="servicios">
+            <h2>Nuestros servicios</h2>
+
+            <div class="contenedor-servicios">
+
+                <article class="tarjeta">
+                    <h3>📷 Fotografía</h3>
+                    <p>
+                        Capturamos momentos especiales
+                        con creatividad y profesionalismo.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>🎨 Diseño</h3>
+                    <p>
+                        Creamos diseños visuales modernos,
+                        atractivos y originales.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>💻 Desarrollo Web</h3>
+                    <p>
+                        Diseñamos páginas web adaptables
+                        a computadoras y celulares.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- GALERÍA: CSS GRID -->
+        <section id="galeria" class="galeria">
+            <h2>Galería de imágenes</h2>
+            <p>Conoce algunos de nuestros trabajos.</p>
+
+            <div class="contenedor-galeria">
+
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=700"
+                     alt="Paisaje natural 1" loading="lazy">
+
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=700"
+                     alt="Paisaje natural 2" loading="lazy">
+
+                <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=700"
+                     alt="Paisaje natural 3" loading="lazy">
+
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=700"
+                     alt="Paisaje natural 4" loading="lazy">
+
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700"
+                     alt="Paisaje natural 5" loading="lazy">
+
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700"
+                     alt="Paisaje natural 6" loading="lazy">
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA: FLEXBOX -->
+    <footer id="contacto" class="pie">
+        <p>© 2026 MiPortafolio</p>
+        <p>Desarrollado con HTML5 y CSS3</p>
+    </footer>
+
 </body>
 </html>
